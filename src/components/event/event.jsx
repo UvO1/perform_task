@@ -1,4 +1,5 @@
 import React from 'react'
+import './event.css'
 
 export function Event(props) {
     const ref = React.useRef();

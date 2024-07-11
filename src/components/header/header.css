@@ -1,36 +1,8 @@
-html, body, div, span, h2, h3, h4, p, a, img, ul, li, footer, header, section{
+span, a, ul, li, header{
     padding: 0;
     border: 0;
     font: inherit;
     vertical-align: baseline;
-}
-
-html {
-    font-size: 100%;
-    font-family: Arial, sans-serif;
-    line-height: 1.25;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    font-family: inherit;
-    line-height: inherit;
-    margin: 0;
-}
-
-html, body {
-    height: 100%;
-}
-
-.a11y-hidden {
-    position: absolute;
-    left: auto;
-    height: 1px;
-    width: 1px;
-    top: 0;
-    overflow: hidden;
-    clip: rect(1px 1px 1px 1px);
 }
 
 .header {
@@ -43,15 +15,6 @@ html, body {
     padding: 0 2.5rem;
     font-family: Arial, sans-serif;
     border-bottom: 1px solid #F0F0F0;
-}
-
-@media (max-width: 768px) {
-    .header {
-        height: 4rem;
-        margin-bottom: 0;
-        padding: 0 0 0 1.25rem;
-        border-bottom: none;
-    }
 }
 
 .header__logo {
@@ -76,12 +39,6 @@ html, body {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    .header__menu {
-        display: block;
-    }
-}
-
 .header__links {
     display: flex;
     gap: 1.75rem;
@@ -91,9 +48,19 @@ html, body {
 }
 
 @media (max-width: 768px) {
+    .header {
+        height: 4rem;
+        margin-bottom: 0;
+        padding: 0 0 0 1.25rem;
+        border-bottom: none;
+    }
+
+    .header__menu {
+        display: block;
+    }
+
     .header__links {
         display: none;
-
         position: absolute;
         z-index: 1;
         top: 100%;
