@@ -178,7 +178,7 @@ function Header() {
                 initedRef.current = true;
                 setActiveTab(new URLSearchParams(location.search).get('tab') || 'all');
             }
-        });
+        },[activeTab]);
 
         const onSelectInput = event => {
             setActiveTab(event.target.value);
@@ -197,7 +197,7 @@ function Header() {
             if (newHasRightScroll !== hasRightScroll) {
                 setHasRightScroll(newHasRightScroll);
             }
-        });
+        },[sizes, hasRightScroll]);
 
         const onArrowCLick = () => {
             const scroller = ref.current.querySelector('.section__panel:not(.section__panel_hidden)');
