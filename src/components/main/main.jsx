@@ -14,13 +14,13 @@ export function Main() {
             initedRef.current = true;
             setActiveTab(new URLSearchParams(location.search).get('tab') || 'all');
         }
-    },[initedRef, activeTab]);
+    });
 
     const onSelectInput = event => {
         setActiveTab(event.target.value);
     };
 
-    let sizes = useMemo(() =>[],[]);
+    let sizes = [];
     const onSize = size => {
         sizes = [...sizes, size];
     };
@@ -31,7 +31,7 @@ export function Main() {
         if (newHasRightScroll !== hasRightScroll) {
             setHasRightScroll(newHasRightScroll);
         }
-    },[sizes, hasRightScroll]);
+    });
 
     const onArrowCLick = () => {
         const scroller = ref.current.querySelector('.section__panel:not(.section__panel_hidden)');
